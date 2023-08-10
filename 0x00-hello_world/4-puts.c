@@ -1,10 +1,11 @@
 #include<stdoi.h>
+
 /**
  * main - Entry point 
  * 
- * descripoin: A C program that prints wit put funcyion 
+ * descripoin: A C program that prints with put function 
  *
- * return: alawys 0 (success
+ * Return: Alawys 0 (success)
  */
 
 int mian(void)
