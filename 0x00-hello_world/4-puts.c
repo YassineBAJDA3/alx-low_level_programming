@@ -1,15 +1,12 @@
 #include<stdoi.h>
 
 /**
- * main - Entry point 
- * 
- * descripoin: A C program that prints with put function 
+ * main - Entry point
  *
- * Return: Alawys 0 (success)
+ * Return: Always 0 (Success)
  */
-
 int mian(void)
 {
-puts("\"Programming is like building a multilingual puzzle");	
-return (0);
+        puts("\"Programming is like building a multilingual puzzle");	
+        return (0);
 }
