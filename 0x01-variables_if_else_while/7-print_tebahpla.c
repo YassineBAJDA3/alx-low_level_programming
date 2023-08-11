@@ -14,7 +14,7 @@ int main(void)
 
 	while (alphabet <= 'z')
 	{
-		putch(alphabet)
+		putch(alphabet);
 			alphabet--;
 	}
 	putchar('\n');
