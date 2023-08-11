@@ -5,7 +5,7 @@
  *
  *Descriptoin: prints the alphabet in lowercase and then in uppercase
  *
- *Return: 0 (success)
+*Return: 0 (success)
 */
 
 int main(void)
@@ -21,8 +21,8 @@ int main(void)
 
 	while (ALPHABET <= 'Z')
 	{
-		 putchar(ALPHABET);
-		 ALPHAiBET++;
+	putchar(ALPHABET);
+	ALPHAiBET++;
 	}
 	putchar('\n');
 
