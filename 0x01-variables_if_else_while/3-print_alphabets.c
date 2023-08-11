@@ -10,16 +10,21 @@
 
 int main(void)
 {
-	char alphabet;
-	char ALPHABET;
-	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+	char alphabet = 'a';
+	char ALPHABET = 'A';
 
+	while (alphabet <= 'z')
+	{
+		putchar(alphabet);
+		alphabet++;
+	}
 
-	putchar("%c", alphabet);
+	while (ALPHABET <= 'Z')
+	{
+		 putchar(ALPHABET);
+		 ALPHABET++;
+	}
+	putchar("\n");
 
-	for (ALPHABET = 'A'; ALPHABET <= 'Z'; ALPHABET++)
-
-	putchar("%c", ALPHABET);
-	putchar('\n');
 	return (0);
 }
