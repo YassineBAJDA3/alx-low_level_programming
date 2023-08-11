@@ -3,7 +3,7 @@
 /**
  * main - entry point
  *
- *Descriptoin: prints the alphabet in lowercase and then in uppercase
+ *Descriptoin: program that prints the alphabet in lowercase
  *
  *Return: 0 (success)
 */
@@ -11,18 +11,13 @@
 int main(void)
 {
 	char alphabet = 'a';
-	char ALPHABET = 'A';
 
 	while (alphabet <= 'z')
 	{
-		putchar(alphabet);
+	if (alphabet == 'e' || alphabet == 'q')
 		alphabet++;
-	}
-
-	while (ALPHABET <= 'Z')
-	{
-		 putchar(ALPHABET);
-		 ALPHAiBET++;
+	putchar(alphabet);
+	alphabet++;
 	}
 	putchar('\n');
 
