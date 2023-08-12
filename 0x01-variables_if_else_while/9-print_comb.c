@@ -19,10 +19,11 @@ int main(void)
 		if (digit != 9)
 		{
 			putchar(',');
-			putchar(' ', '\n');
+			putchar(' ');
 		}
 		digit++;
 
 	}
+	putchar('\n');
 	return (0);
 }
