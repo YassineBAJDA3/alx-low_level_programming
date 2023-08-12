@@ -10,18 +10,23 @@
 
 int main(void)
 {
-	for (int i = 0; i < 10; i++)
+	int i = 0;
+	int J = i + 1;
+
+	while (i < 10)
 	{
-		for (int j = i + 1; j < 10; j++)
+		while (j < 10)
 		{
-			putchar(i + '0')
-			putchar(j + '0')
-			if (i != 9 || j != 8)
-			{
-				putchar(',');
-				putchar(' ');
-			}
+		putchar(i + '0');
+		putchar(j + '0');
+		if (i != 9 || j != 8)
+		{
+			putchar(',');
+			putchar(' ');
 		}
+	j++;
+	}
+	i++;
 	}
 	return (0);
 }
