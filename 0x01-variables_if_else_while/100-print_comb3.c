@@ -11,11 +11,12 @@
 int main(void)
 {
 	int i = 0;
-	int J = i + 1;
 
 	while (i < 10)
 	{
-		while (j < 10)
+
+		int J = i + 1;
+	while (j < 10)
 		{
 		putchar(i + '0');
 		putchar(j + '0');
