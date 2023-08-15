@@ -3,15 +3,15 @@
 /**
  * _abs - function that computes the absolute value of an integer.
  *
- * @r: takes int type input fonctoin
+ * @n: takes int type input fonctoin
  *
  * Return: Always 0 .
  *
 */
 
-int _abs(int r)
+int _abs(int n)
 {
-	if (r < 0)
-		r = (-1) * r;
-		return (0);
+	if (n < 0)
+		n = (-1) * n;
+	return (0);
 }
