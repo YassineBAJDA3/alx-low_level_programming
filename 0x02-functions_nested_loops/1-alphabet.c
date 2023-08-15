@@ -17,4 +17,4 @@ int main(void)
 		letter++;
 	}
 return (0);
-
+}
