@@ -9,7 +9,7 @@
 
 void print_to_98(int n)
 {
-	int cout;
+	int count;
 
 	if (n > 98)
 
