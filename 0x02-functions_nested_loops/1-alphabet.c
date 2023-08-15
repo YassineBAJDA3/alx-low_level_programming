@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * main - Check the code
- *
- * Return: Always 0
+ * print_alphabet - utilizes the _putchar function to print
+ *			 the alphabet, in lowercase, followed by a new line.
 */
 
-int main(void)
+void print_alphabet(void)
 {
 	char letter = 'a';
 
@@ -15,6 +14,6 @@ int main(void)
 	{
 		_putchar(letter);
 		letter++;
+		_putchar('\n');
 	}
-return (0);
 }
