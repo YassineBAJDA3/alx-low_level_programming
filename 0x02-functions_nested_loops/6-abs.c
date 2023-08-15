@@ -5,7 +5,7 @@
  *
  * @n: takes int type input fonctoin
  *
- * Return: Always 0 .
+ * Return: Always 0 (success)
  *
 */
 
