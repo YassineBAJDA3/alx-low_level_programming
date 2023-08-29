@@ -1,3 +1,5 @@
+#include"main.h"
+
 /**
  * _strpbrk - Locates the first occurrence in
  *			a string of any of a set of bytes.
@@ -10,9 +12,11 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
+	int i;
+
 	while (*s)
 	{
-		for (int i = 0; accept[i]; i++)
+		for (i = 0; accept[i]; i++)
 		{
 			if (*s == accept[i])
 			{
@@ -21,5 +25,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		s++;
 	}
-	return (NULL);
+	return (0);
 }
