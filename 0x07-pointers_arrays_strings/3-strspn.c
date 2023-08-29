@@ -9,25 +9,18 @@
  * Return: The number of characters in the initial segment of 's'
  *         which are in the set 'accept'.
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count = 0;
+	unsigned int i, j;
 
-	for (; *s; s++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		int match = 0;
-
-		for (int i = 0; accept[i]; i++)
+		for (j = 0; accept[j] != s[i]; j++)
 		{
-			if (*s == accept[i])
-			{
-				count++;
-				match = 1;
-				break;
-			}
+			if (accept[j] == '\0')
+				return  (i);
 		}
-		if (match == 0)
-			break;
 	}
-	return (count);
+	return (i);
 }
