@@ -11,7 +11,9 @@ void _puts_recursion(char *s)
 	{
 		putchar('\n'); /* Print a newline when the string ends */
 	}
-
-	putchar(*s); /* Print the current character */
-	_puts_recursion(s + 1); /* Move to the next character and recurse */
+	else
+	{
+		putchar(*s); /* Print the current character */
+		_puts_recursion(s + 1); /* Move to the next character and recurse */
+	}
 }
