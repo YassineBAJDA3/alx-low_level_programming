@@ -1,5 +1,5 @@
 #include"main.h"
-
+#include <stdio.h>
 /**
  * _sqrt_recursion - Calculates the natural
  *			square root of a number using recursion
@@ -7,6 +7,7 @@
  *
  * Return: The natural square root of the number, or -1 if an error occurs
  */
+int sqrt_recursive(int n, int guess);
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
@@ -26,7 +27,7 @@ int sqrt_recursive(int n, int guess)
 {
 	if (guess * guess == n)
 
-		return (guess; /* Found the exact square root */
+		return (guess); /* Found the exact square root */
 
 	if (guess * guess > n)
 		return (-1); /* No natural square root for n */
