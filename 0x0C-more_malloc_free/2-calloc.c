@@ -1,7 +1,7 @@
+#include"main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include"main.h"
 
 /**
  * _calloc - Allocates memory for
@@ -17,29 +17,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *ptr;
 
 	if (nmemb == 0 || size == 0)
-		return (NULL);
+		return (0);
 	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
-		return (NULL);
+		return (0);
 	memset(ptr, 0, nmemb * size);
 	return (ptr);
-}
-int main(void)
-{
-	unsigned int i;
-	unsigned int *arr;
-
-	unsigned int size = 5;
-
-	arr = _calloc(size, sizeof(unsigned int));
-	if (arr != NULL)
-	{
-		for (i = 0; i < size; i++)
-		{
-			printf("%u ", arr[i]);
-		}
-		printf("\n");
-		free(arr);
-	}
-	return (0);
 }
