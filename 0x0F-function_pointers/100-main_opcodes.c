@@ -1,37 +1,42 @@
-#include"function_pointers.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - Prints the opcodes of its own main function.
- * @argc: The number of command-line arguments.
- * @argv: An array of command-line argument strings.
+ * main - prints its own opcodes
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: 0 on success, 1 for incorrect
- *		argument count, 2 for negative byte count.
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int bytes, i;
+	char *arr;
 
 	if (argc != 2)
 	{
-		fprintf(stderr, "Error\n");
-		return (1);
+		printf("Error\n");
+		exit(1);
 	}
-	int num_bytes = atoi(argv[1]);
 
-	if (num_bytes < 0)
-	{
-		fprintf(stderr, "Error\n");
-		return (2);
-	}
-	void *main_address = main;
+	bytes = atoi(argv[1]);
 
-	for (i = 0; i < num_bytes; i++)
+	if (bytes < 0)
 	{
-		printf("%02x", *((unsigned char *)main_address + i));
+		printf("Error\n");
+		exit(2);
 	}
-	printf("\n");
+
+	arr = (char *)main;
+
+	for (i = 0; i < bytes; i++)
+	{
+		if (i == bytes - 1)
+		{
+			printf("%02hhx\n", arr[i]);
+			break;
+		}
+		printf("%02hhx ", arr[i]);
+	}
 	return (0);
 }
