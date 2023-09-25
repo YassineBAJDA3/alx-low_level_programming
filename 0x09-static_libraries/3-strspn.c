@@ -1,26 +1,29 @@
 #include "main.h"
-
 /**
- * _strspn - Calculates the length of the initial segment of a string
- *           consisting only of characters from a given set.
- * @s: The string to search.
- * @accept: The set of characters to match against.
- *
- * Return: The number of characters in the initial segment of 's'
- *         which are in the set 'accept'.
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
-
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j;
+	unsigned int n = 0;
+	int r;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		for (j = 0; accept[j] != s[i]; j++)
+		for (r = 0; accept[r]; r++)
 		{
-			if (accept[j] == '\0')
-				return  (i);
+			if (*s == accept[r])
+			{
+				n++;
+				break;
+			}
+			else if (accept[r + 1] == '\0')
+				return (n);
 		}
+		s++;
 	}
-	return (i);
+	return (n);
 }
+

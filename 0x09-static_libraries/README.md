@@ -1,1 +1,1 @@
-C - Static libraries
+this is readme file for static_libraries
