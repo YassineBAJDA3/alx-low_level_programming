@@ -1,41 +1,32 @@
-#include"main.h"
-#include <stdio.h>
+#include "main.h"
 
-int check_palindrome(char *s, int start, int end);
-int is_palindrome(char *s);
+int actual_prime(int n, int i);
 
 /**
- * is_palindrome - Checks if a string is a palindrome using recursion
- * @s: The string to be checked
+ * is_prime_number - says if an integer is a prime number or not
+ * @n: number to evaluate
  *
- * Return: 1 if s is a palindrome, 0 otherwise
+ * Return: 1 if n is a prime number, 0 if not
  */
-int is_palindrome(char *s)
+int is_prime_number(int n)
 {
-	int length = 0;
-
-	while (s[length] != '\0')
-		length++;
-
-	return (check_palindrome(s, 0, length - 1));
+	if (n <= 1)
+		return (0);
+	return (actual_prime(n, n - 1));
 }
 
 /**
- * check_palindrome - Helper function
- *		to check for palindrome recursively
- * @s: The string to be checked
- * @start: The starting index
- * @end: The ending index
+ * actual_prime - calculates if a number is prime recursively
+ * @n: number to evaluate
+ * @i: iterator
  *
- * Return: 1 if s is a palindrome, 0 otherwise
+ * Return: 1 if n is prime, 0 if not
  */
-int check_palindrome(char *s, int start, int end)
+int actual_prime(int n, int i)
 {
-	if (start >= end)
-		return (1); /* All characters checked, so it's a palindrome */
-
-	if (s[start] != s[end])
-		return (0); /* Mismatch, not a palindrome */
-
-	return (check_palindrome(s, start + 1, end - 1));
+	if (i == 1)
+		return (1);
+	if (n % i == 0 && i > 0)
+		return (0);
+	return (actual_prime(n, i - 1));
 }
