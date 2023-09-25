@@ -1,24 +1,30 @@
-#include"main.h"
-
+#include "main.h"
 /**
- * _strcpy - See description
- * @dest: char type string
- * @src: char type string
- * Description: Copy the string pointed to by pointer `src` to
- *		the buffer pointed to by `dest`
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
  *
- * Return: Pointer to `dest`
-*/
-
-char *_strcpy(char *dest, char *src)
+ * Return: void
+ */
+char *_strcat(char *dest, char *src)
 {
 	int i;
+	int j;
 
-	for (i = 0; src[i] != '\0'; i++)
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest[i] = src[i];
+		i++;
 	}
-	dest[i] = '\0';
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
 
+	dest[i] = '\0';
 	return (dest);
 }
+
