@@ -10,12 +10,6 @@ size_t print_listint(const listint_t *h)
 {
 	size_t num = 0;
 
-	if (h == NULL)
-	{
-		printf("Input list is empty\n");
-		return (0);
-	}
-
 	while (h)
 	{
 		printf("%d\n", h->n);
@@ -25,4 +19,3 @@ size_t print_listint(const listint_t *h)
 
 	return (num);
 }
-
